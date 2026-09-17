@@ -1,0 +1,929 @@
+{
+  "schema_version": "1.3",
+  "profile_name": "James Zihao Wang - Master Career Profile",
+  "purpose": "Truth-source profile for ATS resume tailoring, cover letters, and application-question drafting. The generator may select, reorder, and rephrase supported facts but must not invent facts, credentials, metrics, dates, responsibilities, or tools.",
+  "contact": {
+    "name": "James Zihao Wang",
+    "phone": "6473547123",
+    "email": "zhwang2001@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/james-wang-95a8a4168/"
+  },
+  "availability": {
+    "drivers_license": "Ontario G",
+    "travel": true,
+    "weekdays": true,
+    "weekends": true,
+    "day_shift": true,
+    "night_shift": true,
+    "relocation": "Willing to relocate anywhere in Canada",
+    "physical_work": {
+      "stand_8_hour_shift": true,
+      "lift_50_lb": true,
+      "hot_humid_environment": true,
+      "outdoor_fieldwork": true,
+      "cold_storage_exposure": true,
+      "ppe_and_respirator_use": true
+    }
+  },
+  "education": [
+    {
+      "institution": "University of Toronto",
+      "degree": "Honours Bachelor of Science",
+      "program": "Life Sciences",
+      "majors": [
+        "Biology",
+        "Psychology"
+      ],
+      "start_year": 2019,
+      "end_year": 2024,
+      "gpa": null,
+      "resume_rule": "Do not include GPA unless explicitly required."
+    }
+  ],
+  "certifications_training": [
+    {
+      "name": "WHMIS laboratory and safety training",
+      "provider": "Ontario Government",
+      "credential_id": "EHS101",
+      "safe_to_claim": true
+    },
+    {
+      "name": "Bloomberg Market Concepts",
+      "provider": "Bloomberg",
+      "credential_id": "rZRJnuWGNJqLGKwdUAsHNVTR",
+      "safe_to_claim": true
+    }
+  ],
+  "coursework": {
+    "psychology": [
+      "Statistics",
+      "Neuroscience",
+      "Abnormal psychology",
+      "Developmental psychology",
+      "Standardized testing"
+    ],
+    "note": "Coursework supports academic familiarity only. Do not imply clinical practice, counselling, patient care, psychometric test administration, or professional mental-health experience."
+  },
+  "experience": [
+    {
+      "id": "corteva_2025",
+      "organization": "Corteva Agriscience",
+      "title": "Research Assistant",
+      "start": "2025-01",
+      "end": "2025-05",
+      "employment_type": "Paid assignment",
+      "primary_families": [
+        "laboratory_qc",
+        "production_operations",
+        "research_data",
+        "field_research"
+      ],
+      "facts": [
+        {
+          "id": "corteva_gc_sample_prep",
+          "fact": "Prepared canola seed samples for gas chromatography analysis according to established protocols.",
+          "tags": [
+            "sample preparation",
+            "gas chromatography",
+            "protocol adherence",
+            "canola research"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_instrument_operation",
+          "fact": "Operated GC, near-infrared spectroscopy equipment, cytometers, and seed-counting/dispensing equipment using specialized software and standardized procedures.",
+          "tags": [
+            "GC",
+            "NIR",
+            "cytometry",
+            "equipment operation",
+            "laboratory instrumentation"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_seed_counter_calibration",
+          "fact": "Adjusted seed-counting/dispensing equipment for conditions such as humidity, temperature, and grain size; tuned dispensing speed to improve throughput while maintaining acceptable output.",
+          "tags": [
+            "calibration",
+            "process optimization",
+            "throughput",
+            "production equipment",
+            "seed handling"
+          ],
+          "safe_to_claim": true,
+          "metric_rule": "Do not invent a percentage improvement."
+        },
+        {
+          "id": "corteva_equipment_cleaning",
+          "fact": "Cleaned equipment interiors and work areas to prevent buildup, mold, dirt, residual seed, and cross-contamination.",
+          "tags": [
+            "preventive maintenance",
+            "sanitation",
+            "cross-contamination control",
+            "housekeeping"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_trait_research",
+          "fact": "Supported large-scale canola research focused on yield, disease resistance, pod durability, and growth rate.",
+          "tags": [
+            "agricultural research",
+            "plant research",
+            "experimental operations"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_sample_traceability",
+          "fact": "Maintained plant and sample identity through identification badges, labels, envelopes, test tubes, and organized sample handling to prevent mix-ups across genetic variants and disease-treatment groups.",
+          "tags": [
+            "traceability",
+            "sample integrity",
+            "labeling",
+            "chain of identity",
+            "quality control"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_lims_barcode_traceability",
+          "fact": "Used an electronic laboratory/sample-tracking system that generated unique barcodes for sample IDs; applied system-generated barcode labels, replaced physical plant ID badges with the corresponding labels, and maintained sample identity and traceability through downstream workflows.",
+          "tags": [
+            "LIMS",
+            "laboratory information management",
+            "barcode tracking",
+            "sample traceability",
+            "sample identity",
+            "electronic sample management",
+            "data integrity"
+          ],
+          "safe_to_claim": true,
+          "wording_rule": "Prefer 'LIMS/sample-tracking system' or 'LIMS-style electronic sample-tracking system' unless the formal system name is verified."
+        },
+        {
+          "id": "corteva_harvest_procedures",
+          "fact": "Followed standardized plant-harvest procedures, including clearing containers of residual seed, collecting pods, bagging and sealing material, labeling completed collections, and cleaning spilled seed from work areas.",
+          "tags": [
+            "SOP adherence",
+            "harvesting",
+            "repetitive production",
+            "material handling",
+            "sanitation"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_cotyledon_sampling",
+          "fact": "Collected cotyledon leaf samples at scale by aligning identifiers with test tubes, cleaning the hole-punch tool between samples to reduce contamination risk, and repeating the procedure across hundreds of samples.",
+          "tags": [
+            "sample collection",
+            "high-throughput workflow",
+            "cross-contamination control",
+            "traceability"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_quality_incident",
+          "fact": "Detected a one-position mismatch between plant identifiers and test-tube numbers during cotyledon sampling, escalated the discrepancy to a supervisor, and helped contain the issue early so only about 30 samples required re-collection rather than allowing the error to propagate through hundreds of samples.",
+          "tags": [
+            "quality assurance",
+            "deviation detection",
+            "data integrity",
+            "escalation",
+            "sample traceability"
+          ],
+          "safe_to_claim": true,
+          "metric_rule": "Keep 'about 30' and 'hundreds' approximate; do not convert to a fabricated percentage."
+        },
+        {
+          "id": "corteva_maturity_assessment",
+          "fact": "Assessed plant harvest readiness using pod bronzing, texture, brittleness, and growth status; set aside immature plants for additional growth or discarded unsuitable material according to procedure.",
+          "tags": [
+            "in-process inspection",
+            "quality assessment",
+            "visual inspection",
+            "harvest readiness"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_weight_check",
+          "fact": "Checked packaged seed bags against standard target weight within an allowed margin of error.",
+          "tags": [
+            "quality control",
+            "weight verification",
+            "inspection",
+            "packaging"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_batch_tracking",
+          "fact": "Organized and documented thousands of samples, updated batch information in computer systems, and moved harvested material through drying and cold-storage workflows.",
+          "tags": [
+            "inventory",
+            "batch tracking",
+            "documentation",
+            "Excel",
+            "cold storage",
+            "sample logistics"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_safety",
+          "fact": "Followed PPE and chemical-safety procedures including safety goggles, steel-toe footwear, respirator use, full-body protective clothing for pesticide or treated-seed work, hand-washing/decontamination practices, and review of Safety Data Sheets before handling hazardous materials.",
+          "tags": [
+            "PPE",
+            "SDS",
+            "chemical safety",
+            "respirator",
+            "hazardous materials",
+            "WHMIS"
+          ],
+          "safe_to_claim": true,
+          "wording_rule": "Use 'full-body protective clothing/PPE'; do not name a specific suit unless verified."
+        },
+        {
+          "id": "corteva_machine_safety",
+          "fact": "Worked around large equipment under machine-safety procedures that required equipment to be shut down and access controlled before maintenance; understands the importance of keys, warning indicators, and preventing startup while maintenance personnel are inside.",
+          "tags": [
+            "machine safety",
+            "hazard awareness",
+            "industrial safety"
+          ],
+          "safe_to_claim": true,
+          "wording_rule": "Do not claim formal Lockout/Tagout certification unless verified."
+        },
+        {
+          "id": "corteva_work_conditions",
+          "fact": "Regularly performed repetitive industrial-scale work while standing for full shifts, including hot/humid greenhouse work, outdoor field harvesting, cold-storage tasks, and lifting loads up to approximately 50 lb.",
+          "tags": [
+            "physical work",
+            "standing",
+            "lifting",
+            "greenhouse",
+            "fieldwork",
+            "shift readiness"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "corteva_lab_scale_fume_hood",
+          "fact": "Used a laboratory scale under a fume hood to prepare a blue seed-coating treatment/agent used in seed-processing work.",
+          "tags": [
+            "laboratory scale",
+            "weighing",
+            "fume hood",
+            "sample preparation",
+            "seed coating"
+          ],
+          "safe_to_claim": true,
+          "wording_rule": "Do not imply formulation development; user weighed/prepared the coating agent according to procedure."
+        },
+        {
+          "id": "corteva_lims_scope_limit",
+          "fact": "Used the electronic barcode/sample-tracking system for sample identity and traceability; did not manage invoicing, instrument records, reporting, workflow automation, or system administration.",
+          "tags": [
+            "LIMS",
+            "scope boundary",
+            "sample tracking"
+          ],
+          "safe_to_claim": true,
+          "resume_rule": "Describe LIMS use specifically as sample/barcode traceability and workflow tracking; do not claim LIMS administration."
+        }
+      ]
+    },
+    {
+      "id": "rotman_2022",
+      "organization": "University of Toronto - Rotman Commerce",
+      "title": "Research Assistant",
+      "start": "2022-09",
+      "end": "2022-12",
+      "employment_type": "Unpaid Research Opportunity Program",
+      "primary_families": [
+        "research_data",
+        "research_admin"
+      ],
+      "facts": [
+        {
+          "id": "rotman_research_topic",
+          "fact": "Researched relationships between CEO/top-management political ideology and corporate social responsibility rankings.",
+          "tags": [
+            "literature research",
+            "business research",
+            "ESG",
+            "executive research"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "rotman_data_collection",
+          "fact": "Collected data from Bloomberg, Morningstar, Compustat, Factiva, litigation/financial sources, executive biographies, ESG scores, and political-donation records.",
+          "tags": [
+            "data collection",
+            "Bloomberg",
+            "Morningstar",
+            "Compustat",
+            "Factiva",
+            "secondary research"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "rotman_bayesian",
+          "fact": "Applied Bayesian cluster analysis to collected data, reducing manual inference time by approximately 50%.",
+          "tags": [
+            "Bayesian analysis",
+            "statistics",
+            "data analysis",
+            "research methods"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "rotman_reporting",
+          "fact": "Created PowerPoint presentations and Excel spreadsheets to communicate research objectives and findings to stakeholders.",
+          "tags": [
+            "PowerPoint",
+            "Excel",
+            "stakeholder communication",
+            "research reporting"
+          ],
+          "safe_to_claim": true
+        }
+      ]
+    },
+    {
+      "id": "academic_botanical_lab_2023",
+      "organization": "University of Toronto",
+      "title": "Academic Laboratory Experience - Plant Biology",
+      "start": "2023",
+      "end": "2023",
+      "employment_type": "University coursework / academic laboratory",
+      "primary_families": [
+        "laboratory_qc",
+        "research_data"
+      ],
+      "resume_rule": "Never present this as paid employment or as a formal Botanical Lab Technician job. Include only when it materially helps a laboratory/research application.",
+      "facts": [
+        {
+          "id": "academic_experimental_methods",
+          "fact": "Completed controlled plant-biology laboratory experiments emphasizing experimental design, quantitative measurement, sample handling, and interpretation of biological data.",
+          "tags": [
+            "experimental design",
+            "academic laboratory",
+            "quantitative measurement",
+            "data interpretation"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "academic_spectrophotometry",
+          "fact": "Used Spectronic-20 and Genesys 20 spectrophotometers to measure absorbance changes and analyze reaction rates under controlled treatment conditions.",
+          "tags": [
+            "spectrophotometry",
+            "instrumentation",
+            "absorbance",
+            "quantitative analysis"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "academic_chromatography",
+          "fact": "Used chromatography to separate plant pigments and calculated Rf values to compare pigment characteristics.",
+          "tags": [
+            "chromatography",
+            "Rf values",
+            "sample analysis"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "academic_micropipetting",
+          "fact": "Developed micropipetting and small-volume liquid-handling skills for sample preparation.",
+          "tags": [
+            "micropipetting",
+            "liquid handling",
+            "sample preparation"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "academic_time_course",
+          "fact": "Designed time-course treatments, recorded absorbance data, plotted results, and interpreted experimental trends.",
+          "tags": [
+            "experimental design",
+            "data recording",
+            "plotting",
+            "analysis"
+          ],
+          "safe_to_claim": true
+        }
+      ]
+    },
+    {
+      "id": "voloaxle",
+      "organization": "Voloaxle",
+      "title": "Business / Sales and Customer Support",
+      "start": null,
+      "end": null,
+      "employment_type": "Business experience",
+      "primary_families": [
+        "scientific_commercial_client",
+        "production_operations"
+      ],
+      "facts": [
+        {
+          "id": "voloaxle_sales_support",
+          "fact": "Sold e-bike conversion kits and explained technical specifications including voltage, amp-hours, estimated range, speed, installation considerations, battery-cell sourcing, controller cooling, and braking tradeoffs.",
+          "tags": [
+            "technical sales",
+            "customer education",
+            "e-bike systems",
+            "technical specifications"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "voloaxle_value_prop",
+          "fact": "Explained product advantages and tradeoffs to customers, including price/performance positioning and durability considerations.",
+          "tags": [
+            "sales",
+            "product positioning",
+            "customer communication"
+          ],
+          "safe_to_claim": true
+        }
+      ]
+    },
+    {
+      "id": "health_central",
+      "organization": "Health Central",
+      "title": "Business / Customer Support",
+      "start": null,
+      "end": null,
+      "employment_type": "Business experience",
+      "primary_families": [
+        "scientific_commercial_client",
+        "research_admin"
+      ],
+      "facts": [
+        {
+          "id": "health_central_support",
+          "fact": "Provided customer support for compression-glove orders during COVID-era shipping disruptions, reviewed tracking information, explained package status and ETAs, and responded to customer concerns by email/phone.",
+          "tags": [
+            "customer support",
+            "email support",
+            "phone support",
+            "shipment tracking",
+            "conflict resolution"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "health_central_chargebacks",
+          "fact": "Handled delivery concerns and disputes professionally; the business received only one chargeback during the user's period of operation.",
+          "tags": [
+            "chargebacks",
+            "customer retention",
+            "conflict resolution"
+          ],
+          "safe_to_claim": true,
+          "wording_rule": "Use cautiously; do not imply the low chargeback count was solely attributable to one person."
+        }
+      ]
+    },
+    {
+      "id": "crestplay",
+      "organization": "Crestplay",
+      "title": "Founder / Operator",
+      "start": null,
+      "end": "Present",
+      "employment_type": "Entrepreneurial experience",
+      "primary_families": [
+        "research_admin",
+        "scientific_commercial_client"
+      ],
+      "facts": [
+        {
+          "id": "crestplay_budgeting",
+          "fact": "Tracks income and expenses, budgets operating costs, and evaluates ways to reduce spending.",
+          "tags": [
+            "budgeting",
+            "expense tracking",
+            "cost control",
+            "operations"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "crestplay_team_coordination",
+          "fact": "Organizes team meetings, assigns daily tasks, and coordinates responsibility for specific deliverables.",
+          "tags": [
+            "team coordination",
+            "task management",
+            "meetings",
+            "operations"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "crestplay_vendor_comms",
+          "fact": "Communicates with distributors, API/data-service providers, and sales representatives by email and Zoom to evaluate services and integration options.",
+          "tags": [
+            "vendor management",
+            "business communication",
+            "technical evaluation",
+            "Zoom",
+            "email"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "crestplay_negotiation",
+          "fact": "Negotiates pricing and service terms, including exclusive offers for selected services.",
+          "tags": [
+            "negotiation",
+            "vendor relations",
+            "procurement",
+            "cost reduction"
+          ],
+          "safe_to_claim": true
+        }
+      ]
+    },
+    {
+      "id": "procyon_labs",
+      "organization": "Procyon Laboratories",
+      "title": "Co-founder",
+      "start": null,
+      "end": null,
+      "employment_type": "Startup / project",
+      "primary_families": [
+        "scientific_commercial_client",
+        "production_operations",
+        "research_data"
+      ],
+      "facts": [
+        {
+          "id": "procyon_product",
+          "fact": "Co-developed drone accessories including anti-collision lights and a flash lamp.",
+          "tags": [
+            "product development",
+            "hardware",
+            "drones",
+            "electronics"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "procyon_frontend",
+          "fact": "Worked on the user-facing frontend for device controls.",
+          "tags": [
+            "frontend",
+            "UI",
+            "React",
+            "JavaScript"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "procyon_esp32",
+          "fact": "Built an ESP32 prototype with low-latency Bluetooth controls and configurable device settings.",
+          "tags": [
+            "ESP32",
+            "Bluetooth",
+            "embedded prototyping",
+            "low-latency controls"
+          ],
+          "safe_to_claim": true
+        },
+        {
+          "id": "procyon_award",
+          "fact": "Won a Winter 2024 cohort pitch competition and a $5,000 grant through the Halton Small Business Centre.",
+          "tags": [
+            "pitch competition",
+            "grant",
+            "entrepreneurship",
+            "presentation"
+          ],
+          "safe_to_claim": true,
+          "verification_note": "Retain exact program name only after confirming official naming if needed."
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "laboratory_paid_work": [
+      "Gas chromatography sample preparation",
+      "GC operation",
+      "Near-infrared spectroscopy",
+      "Cytometers",
+      "Seed-counting/dispensing equipment",
+      "Sample collection",
+      "High-throughput sample organization",
+      "Sample labeling and traceability",
+      "Cross-contamination control",
+      "Equipment cleaning",
+      "Basic troubleshooting",
+      "Weight verification",
+      "Visual quality inspection"
+    ],
+    "laboratory_academic_only": [
+      "Compound light and digital microscopy",
+      "Dissection tools",
+      "Dye staining",
+      "Test strips",
+      "Chromatography",
+      "Spectrophotometry",
+      "Micropipetting",
+      "EC meters"
+    ],
+    "quality_and_operations": [
+      "Procedure/SOP adherence",
+      "Sample integrity",
+      "Traceability",
+      "Deviation/error detection",
+      "Issue escalation",
+      "Data integrity",
+      "Cross-contamination prevention",
+      "Batch/sample tracking",
+      "Sanitation and housekeeping",
+      "Process optimization",
+      "Repetitive high-throughput workflows",
+      "Inventory/sample organization"
+    ],
+    "safety": [
+      "WHMIS",
+      "Safety Data Sheets (SDS)",
+      "PPE",
+      "Respirator use",
+      "Chemical/pesticide safety",
+      "Steel-toe footwear",
+      "Machine hazard awareness"
+    ],
+    "research_and_data": [
+      "Experimental design",
+      "Statistical analysis",
+      "Bayesian cluster analysis",
+      "Automated data collection",
+      "Research reporting",
+      "Secondary-source research",
+      "Excel",
+      "PowerPoint"
+    ],
+    "software": {
+      "advanced": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "intermediate": [
+        "Excel",
+        "Word",
+        "PowerPoint"
+      ],
+      "basic_or_rusty": [
+        "R",
+        "SQL"
+      ],
+      "excel_specific": [
+        "Pivot tables"
+      ]
+    },
+    "customer_and_commercial": [
+      "Phone support",
+      "Email support",
+      "Conflict resolution",
+      "Shipment tracking",
+      "Technical product explanation",
+      "Technical sales",
+      "Vendor communication",
+      "Price negotiation"
+    ]
+  },
+  "role_families": {
+    "laboratory_qc": [
+      "bio lab technician",
+      "quality assurance technician",
+      "food safety technician",
+      "QC/QA technician",
+      "sample technician",
+      "lab attendant",
+      "pharmaceutical/biotech technician"
+    ],
+    "research_data": [
+      "field research assistant",
+      "research assistant",
+      "research analyst",
+      "mental health research analyst",
+      "psychometrist assistant"
+    ],
+    "clinical_research_operations": [
+      "clinical trials assistant",
+      "study assistant",
+      "research administrator"
+    ],
+    "mental_health_human_services": [
+      "residential counsellor",
+      "mental health support worker"
+    ],
+    "scientific_commercial_client": [
+      "scientific customer support",
+      "junior technical sales",
+      "laboratory client services"
+    ],
+    "production_operations": [
+      "manufacturing technician",
+      "production technician"
+    ]
+  },
+  "claim_restrictions": [
+    "Do not claim ISO/IEC 17025 expertise, certification, or work experience. User only recalls reading about it online.",
+    "LIMS may be used where relevant because the user worked with an electronic barcode-based sample-tracking system. Prefer 'LIMS/sample-tracking system' unless the formal platform name is verified.",
+    "For GMP, GLP, HACCP, and CAPA, maximize truthful overlap by describing aligned/transferable practices (traceability, controlled procedures, sanitation, deviation detection, corrective action, data integrity). Do not claim formal certification, formal QMS ownership, or regulated-environment status unless later verified.",
+    "Do not claim clinical-trial, REB/ethics, informed-consent, patient-record, REDCap, participant-recruitment, or clinical-data-management experience.",
+    "Do not claim professional mental-health counselling, patient care, crisis intervention, or administration of standardized psychological tests.",
+    "Do not present University of Toronto plant-biology coursework as paid employment or as a formal Botanical Lab Technician job.",
+    "Do not claim formal Lockout/Tagout certification.",
+    "Do not name a specific chemical-protection suit unless verified.",
+    "Do not claim R or SQL proficiency beyond basic/rusty familiarity.",
+    "Do not fabricate production-volume, error-rate, throughput, revenue, customer, or safety metrics.",
+    "Do not add tools, instruments, certifications, job titles, or responsibilities merely because they appear in a job description."
+  ],
+  "tailoring_rules": {
+    "resume_format": "Single-column ATS-friendly layout.",
+    "headline": "Use a role-specific headline; do not default to 'Researcher' for every application.",
+    "summary": "2-4 lines, tailored to the job family using only supported facts.",
+    "experience_selection": "Select the 2-4 most relevant experiences. Entrepreneurial roles may be included or omitted based on relevance.",
+    "bullet_selection": "Use 3-5 high-value bullets per selected experience. Prefer evidence of outcomes, scale, quality, safety, or problem solving.",
+    "skills_selection": "Show only skills relevant to the posting. Do not dump the full software stack into lab/QC resumes.",
+    "academic_lab_rule": "Label as 'Academic Laboratory Experience' and include only for roles where it materially strengthens technical fit.",
+    "keyword_rule": "Use job-description terminology only where it accurately maps to an existing fact. No keyword stuffing.",
+    "truth_rule": "The model may rephrase, combine closely related facts, and reorder them. It may not invent facts or exaggerate experience level.",
+    "cover_letter_rule": "Use 2-3 concrete examples from the master profile and connect them to employer requirements. Avoid generic enthusiasm-only letters.",
+    "regulated_quality_rule": "For pharma/biotech/QA roles, surface LIMS/barcode traceability, SOP/protocol adherence, sample identity control, contamination prevention, equipment checks, data integrity, deviation detection, escalation, and corrective re-collection. Use GMP/GLP/CAPA/HACCP terminology only as aligned/transferable practice unless formal regulated-system experience is verified.",
+    "document_layout_policy": {
+      "resume": {
+        "default_length": "1 page",
+        "format": "single-column ATS-safe layout",
+        "body_font_size_pt": "10.5-11.0",
+        "line_spacing": "approximately 1.10-1.15",
+        "section_spacing": "clear, visible separation between sections and roles",
+        "page_fill": "use the page naturally; avoid top-heavy layouts and large unused lower-page whitespace",
+        "priority": "readability and recruiter scanability over maximum content density",
+        "overflow_rule": "remove or shorten lower-value content before reducing font size or line spacing",
+        "visual_baseline": "James_Wang_Lab_Technician_Orillia_Resume_v11"
+      },
+      "cover_letter": {
+        "default_length": "1 page",
+        "body_font_size_pt": "11.5-12.0",
+        "line_spacing": "approximately 1.30-1.50 when it still fits on one page",
+        "paragraph_spacing": "generous spacing between paragraphs",
+        "priority": "airy, readable page with larger type; avoid dense blocks of text",
+        "overflow_rule": "tighten wording and non-body spacing before shrinking body font or compressing line spacing",
+        "visual_baseline": "James_Wang_Lab_Technician_Orillia_Cover_Letter_v3"
+      }
+    },
+    "content_density_rule": "If a tailored resume becomes visually cramped, cut weaker bullets, less-relevant skills, or lower-value experiences. Do not solve crowding by shrinking the font or compressing line spacing."
+  },
+  "open_questions_for_v1_1": [
+    "Exact start/end dates and preferred resume title for Voloaxle.",
+    "Exact start/end dates and preferred resume title for Health Central.",
+    "Crestplay start date and whether 'Founder' or 'Co-founder' is the preferred title.",
+    "Procyon Laboratories start/end dates and whether it was incorporated/employment, a startup project, or an extracurricular venture.",
+    "Exact title/name of the Halton Small Business Centre Winter 2024 pitch competition/program if the award will be listed.",
+    "Whether the Corteva assignment's official HR title was exactly 'Research Assistant'.",
+    "Whether any specific electronic lab notebook, inventory system, LIMS-like software, or internal tracking software was used at Corteva.",
+    "Whether the user has First Aid/CPR, food-handler, biosafety, animal-care, or other safety certifications not yet listed."
+  ],
+  "quality_framework_positioning": {
+    "LIMS": {
+      "strength": "strong",
+      "supported_by": [
+        "electronic sample tracking",
+        "unique barcode generation",
+        "sample ID reconciliation",
+        "barcode label application",
+        "traceability through downstream workflows"
+      ],
+      "resume_language": [
+        "LIMS/sample-tracking system",
+        "barcode-based sample traceability",
+        "electronic sample identity management",
+        "laboratory information management workflow"
+      ]
+    },
+    "GMP": {
+      "strength": "transferable/aligned",
+      "supported_by": [
+        "standardized procedures",
+        "PPE and chemical safety",
+        "cleaning and sanitation",
+        "label and identity control",
+        "equipment checks and routine maintenance",
+        "repetitive controlled production workflows",
+        "error detection and escalation"
+      ],
+      "resume_language": [
+        "GMP-aligned documentation, traceability, cleanliness, and controlled-process practices",
+        "experience working in a highly standardized production/laboratory environment with practices transferable to GMP-regulated settings"
+      ],
+      "do_not_claim_without_verification": [
+        "Worked in a GMP-certified facility",
+        "Performed GMP batch release",
+        "Completed formal GMP deviations/CAPA"
+      ]
+    },
+    "GLP": {
+      "strength": "transferable/aligned",
+      "supported_by": [
+        "sample identification",
+        "instrument use",
+        "protocol adherence",
+        "data integrity",
+        "traceability",
+        "controlled sample collection",
+        "error escalation"
+      ],
+      "resume_language": [
+        "GLP-aligned sample handling, traceability, protocol adherence, and data-integrity practices",
+        "laboratory practices directly transferable to GLP environments"
+      ],
+      "do_not_claim_without_verification": [
+        "Worked under formal GLP certification",
+        "Authored GLP study protocols",
+        "Served as GLP study personnel"
+      ]
+    },
+    "CAPA": {
+      "strength": "relevant experience, not formal CAPA ownership",
+      "supported_by": [
+        "detected a sample-numbering deviation",
+        "escalated to supervisor",
+        "contained the issue before propagation",
+        "supported re-collection of affected samples"
+      ],
+      "resume_language": [
+        "identified and escalated quality deviations before downstream impact",
+        "experience relevant to deviation investigation and CAPA environments",
+        "supported corrective action by containing an identification error and re-collecting affected samples"
+      ],
+      "do_not_claim_without_verification": [
+        "Owned CAPA investigations",
+        "Opened/closed CAPA records",
+        "Performed formal root-cause analysis under a QMS"
+      ]
+    },
+    "HACCP": {
+      "strength": "limited transferability",
+      "supported_by": [
+        "contamination prevention",
+        "cleaning and sanitation",
+        "hazard awareness",
+        "controlled handling"
+      ],
+      "resume_language": [
+        "contamination-control and sanitation practices transferable to HACCP environments"
+      ],
+      "do_not_claim_without_verification": [
+        "HACCP certified",
+        "Developed HACCP plans",
+        "Performed CCP monitoring"
+      ]
+    }
+  },
+  "technical_projects_and_familiarity": [
+    {
+      "id": "fdm_3d_printing",
+      "context": "Coursework and personal use",
+      "fact": "Has hands-on familiarity with FDM 3D printing, including STL files, dimensional adjustments, and support setup; owns a 3D printer.",
+      "tags": [
+        "FDM 3D printing",
+        "STL",
+        "dimensional adjustment",
+        "supports",
+        "additive manufacturing"
+      ],
+      "safe_to_claim": true,
+      "claim_boundary": "Do not describe this as blown-film extrusion or industrial extrusion experience."
+    }
+  ],
+  "experience_limits": [
+    "No hands-on equipment repair experience at Corteva; experience is operation, adjustment/calibration, cleaning, maintenance, and troubleshooting.",
+    "Did not personally handle outbound shipping documentation/courier processes at Corteva.",
+    "Did not write formal laboratory reports at Corteva.",
+    "LIMS use was limited to sample identity/barcode tracking and related workflow traceability, not system administration, invoicing, instrument/standards management, or workflow automation.",
+    "No direct blown-film extrusion, industrial extruder, or reactor operating experience; only FDM 3D-printing familiarity from coursework/personal use.",
+    "Temperature-related equipment controls were on seed-counting/dispensing appliances."
+  ]
+}

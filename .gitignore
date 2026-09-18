@@ -3,4 +3,10 @@ __pycache__/
 .DS_Store
 .scrapling/
 data/
-
+.jobbot/
+resumes/
+coverletters/
+applications/
+.env
+.env.*
+!.env.example

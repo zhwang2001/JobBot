@@ -128,6 +128,19 @@ def fetch(url, state_dir, headed=False):
         return response.body
 
 
+def scrape_job(url, state_dir=ROOT / ".scrapling", output_dir=ROOT / "data", headed=False, html_path=None):
+    """Fetch, validate, adaptively extract, and save JSON; return its path and data."""
+    canonical_url(url)
+    html = Path(html_path).read_bytes() if html_path else fetch(url, state_dir, headed)
+    result = extract(html, url, state_dir)
+    result["extraction"]["source"] = "captured_html" if html_path else "live_scrapling_browser"
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    path = output_dir / f"indeed-{result['job_id']}.json"
+    path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return path, result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("url")
@@ -137,13 +150,7 @@ def main():
     parser.add_argument("--headed", action="store_true", help="Show the dedicated Scrapling browser.")
     args = parser.parse_args()
     try:
-        canonical_url(args.url)
-        html = args.html.read_bytes() if args.html else fetch(args.url, args.state_dir, args.headed)
-        result = extract(html, args.url, args.state_dir)
-        result["extraction"]["source"] = "captured_html" if args.html else "live_scrapling_browser"
-        args.output_dir.mkdir(parents=True, exist_ok=True)
-        path = args.output_dir / f"indeed-{result['job_id']}.json"
-        path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+        path, result = scrape_job(args.url, args.state_dir, args.output_dir, args.headed, args.html)
         print(json.dumps({"status": "ok", "output": str(path), "title": result["title"], "extraction": result["extraction"]}, indent=2))
         return 0
     except (ExtractionError, OSError) as exc:

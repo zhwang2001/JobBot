@@ -81,14 +81,36 @@ discover it on the next turn.
 .venv/bin/python extract_job.py 'https://ca.indeed.com/?r=us&vjk=d3e9cd48aa379808'
 ```
 
-This adapter currently supports Indeed Canada/US URLs containing `vjk` or `jk`.
-It normalizes the job ID to `/viewjob?jk=...`, visits the homepage and then the
-job in a persistent Scrapling browser session, and writes the full description,
-title, employer, location, and pay/type to `data/indeed-<job-id>.json`.
-Use `--headed` to display the browser. It has its own profile under `.scrapling/`.
+The adapter supports Indeed Canada/US URLs containing `vjk` or `jk`, LinkedIn
+`/jobs/view/...` URLs, and LinkedIn search URLs containing one `currentJobId`.
+It normalizes the selected job to a canonical job page and writes the full
+description, title, employer, location, and available employment details to
+`data/<board>-<job-id>.json`.
+
+LinkedIn requires your own authenticated session. On the first LinkedIn run,
+use `--headed`, sign in directly in the dedicated browser window, and allow the
+command to continue. JobBot never asks for or handles the credentials. Scrapling
+stores the resulting cookies/local storage under the Git-ignored
+`.scrapling/browser-profile-linkedin/`. Later runs reuse that profile and can
+usually run headlessly:
+
+```sh
+# One-time interactive sign-in and extraction
+.venv/bin/python extract_job.py \
+  'https://www.linkedin.com/jobs/search-results/?currentJobId=4466238218' --headed
+
+# Later authenticated runs
+.venv/bin/python extract_job.py \
+  'https://www.linkedin.com/jobs/view/4466238218/'
+```
+
+Indeed and LinkedIn use separate browser profiles. The adapter does not copy or
+open the user's normal Chrome profile, export cookies, bypass login, or submit
+applications. If LinkedIn expires the session or presents a security checkpoint,
+rerun with `--headed` and complete it in the LinkedIn window.
 
 Initial selector discovery was assisted by Codex. Subsequent execution of this
-script makes **no LLM calls**. For each of the two observed Indeed layouts:
+script makes **no LLM calls**. For each supported board/layout:
 
 1. Validate all extracted fields, then use `auto_save=True` to save their element
    structures in `.scrapling/selectors.db` on the first successful extraction.
@@ -100,7 +122,7 @@ script makes **no LLM calls**. For each of the two observed Indeed layouts:
 Adaptive matching is heuristic, not a guarantee for arbitrary redesigns. Blocks,
 sign-in pages, and new layouts may still require review. Do not delete
 `.scrapling/` if you want to retain learned structures and the browser session.
-The latest fetched HTML is retained in `.scrapling/last-response.html` for
+The latest fetched HTML is retained in `.scrapling/last-response-<board>.html` for
 diagnosis; generated data and browser state are ignored by Git.
 
 You can also parse a previously captured rendered DOM without network access:
@@ -111,12 +133,19 @@ You can also parse a previously captured rendered DOM without network access:
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-Verified September 17, 2026: the full live URL pipeline reused the existing
-Scrapling selectors and generated both PDFs in one draft/audit attempt.
+Verified October 5, 2026: the supplied authenticated LinkedIn URL resolved to
+**Research Assistant, Japan Gallery (24-month contract), Royal Ontario Museum,
+Toronto**. The first successful extraction trained all five LinkedIn fields; a
+second live headless run reused the saved session and selectors with
+`llm_used: false` and `learned: []`. The extracted description contains 8,135
+characters. All 39 automated tests pass, including LinkedIn authentication,
+both current and legacy LinkedIn layouts, adaptive relocation, the three
+document modes, PDF-only publication, and failure isolation.
+
+Verified September 17, 2026: the full live Indeed URL pipeline reused the
+existing Scrapling selectors and generated both PDFs in one draft/audit attempt.
 Both final PDFs were visually inspected and are one page, with no compensation
-labels. All 32 automated tests pass, including the three modes, PDF-only
-publication, readable filename handling, repeat-run preservation, and stopping
-generation when extraction fails.
+labels.
 
 The captured-DOM mode trusts the supplied file/URL pairing and records
 `source: captured_html`. Live runs verify the response URL and record
@@ -142,11 +171,19 @@ Run the full pipeline from one job URL:
 .venv/bin/python main.py 'https://ca.indeed.com/?r=us&vjk=d3e9cd48aa379808' --mode both
 ```
 
+LinkedIn uses the same pipeline. The first run must be visible for sign-in:
+
+```sh
+.venv/bin/python main.py \
+  'https://www.linkedin.com/jobs/search-results/?currentJobId=4466238218' \
+  --headed --mode both
+```
+
 Use `--mode resume` or `--mode cover-letter` to request only one document.
 Running `main.py` without a URL prompts for one. The command scrapes with the
-existing Indeed adapter, saves the job JSON, then calls the document builder.
+matching Indeed or LinkedIn adapter, saves the job JSON, then calls the document builder.
 It stops if extraction fails; it never falls back to stale job data or submits
-an application. Only the previously supported Indeed Canada/US URLs are supported.
+an application.
 
 `--headed` shows the scraping browser; `--state-dir` selects Scrapling's stored
 templates/browser profile. `--data-dir` overrides the extraction JSON directory

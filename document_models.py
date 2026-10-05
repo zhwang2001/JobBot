@@ -18,13 +18,13 @@ class Claim(StrictModel):
 
 class Role(StrictModel):
     experience_id: str
-    bullets: list[Claim] = Field(min_length=3, max_length=5)
+    bullets: list[Claim] = Field(min_length=2, max_length=5)
 
 
 class Resume(StrictModel):
     summary: Claim
     skills: list[Claim] = Field(min_length=4, max_length=12)
-    experience: list[Role] = Field(min_length=2, max_length=4)
+    experience: list[Role] = Field(min_length=2, max_length=6)
     certification_names: list[str]
 
 

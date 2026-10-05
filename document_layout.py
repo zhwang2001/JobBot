@@ -1,4 +1,4 @@
-"""ATS-safe Word output, PDF conversion, and a strict one-page layout gate."""
+"""ATS-safe Word output, PDF conversion, and profile-defined page limits."""
 
 from datetime import date
 import os
@@ -28,7 +28,7 @@ def find_soffice(explicit=None):
     candidate = shutil.which("soffice")
     if candidate:
         return candidate
-    raise ValueError("LibreOffice is required for one-page verification and PDF output. Set JOBBOT_SOFFICE or --soffice to its executable.")
+    raise ValueError("LibreOffice is required for page-limit verification and PDF output. Set JOBBOT_SOFFICE or --soffice to its executable.")
 
 
 def setup_document(kind):
@@ -193,8 +193,16 @@ def render_draft(draft, profile, job, directory, soffice):
         path = directory / f"{kind}.docx"
         writer(content, profile, job, path)
         pdf, pages = to_pdf(path, soffice)
-        if pages != 1:
-            overflow.append(f"{kind} is {pages} pages; shorten lower-value content to fit one page without changing fonts or spacing.")
+        policy_name = "cover_letter" if kind == "cover-letter" else kind
+        policy = profile.get("tailoring_rules", {}).get(
+            "document_layout_policy", {}
+        ).get(policy_name, {})
+        maximum_pages = int(policy.get("maximum_pages", 1 if kind == "cover-letter" else 2))
+        if pages > maximum_pages:
+            overflow.append(
+                f"{kind} is {pages} pages; shorten repetition or lower-value content "
+                f"to at most {maximum_pages} pages without changing fonts or spacing."
+            )
         # DOCX is a temporary conversion intermediate, never a public output.
         output[kind] = {"pdf": pdf}
     return output, overflow

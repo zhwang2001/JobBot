@@ -8,7 +8,7 @@ from unittest.mock import patch
 from docx import Document
 from docx.oxml.ns import qn
 
-from document_layout import dates, write_cover_letter, write_resume
+from document_layout import dates, render_draft, write_cover_letter, write_resume
 from document_models import Draft, Review, evidence_catalog, validate_draft
 from generate_documents import CodexClient, ROOT, filename_component, generate_documents, generation_prompt
 
@@ -62,6 +62,27 @@ class DocumentTests(unittest.TestCase):
     def test_all_modes_validate(self):
         for mode in ("resume", "cover-letter", "both"):
             validate_draft(fixture(mode), PROFILE, mode)
+
+    def test_resume_schema_accepts_six_relevant_roles_with_two_bullets_each(self):
+        roles = [role for role in PROFILE["experience"] if len(role["facts"]) >= 2][:6]
+        claim = lambda fact: {"text": fact["fact"], "evidence": [fact["id"]]}
+        draft = Draft.model_validate({
+            "resume": {
+                "summary": claim(roles[0]["facts"][0]),
+                "skills": [claim(fact) for fact in roles[0]["facts"][:4]],
+                "experience": [
+                    {
+                        "experience_id": role["id"],
+                        "bullets": [claim(fact) for fact in role["facts"][:2]],
+                    }
+                    for role in roles
+                ],
+                "certification_names": [],
+            },
+            "cover_letter": None,
+        })
+        self.assertEqual(len(draft.resume.experience), 6)
+        validate_draft(draft, PROFILE, "resume")
 
     def test_wrong_mode_rejected(self):
         with self.assertRaisesRegex(ValueError, "presence"):
@@ -120,9 +141,22 @@ class DocumentTests(unittest.TestCase):
     def test_prompt_uses_profile_instructions_and_omits_contact(self):
         prompt = generation_prompt(PROFILE, JOB, "both", [])
         self.assertIn(PROFILE["tailoring_rules"]["truth_rule"], prompt)
+        self.assertIn("typically 3-6", prompt)
+        self.assertNotIn("Select 2 relevant roles", prompt)
         self.assertNotIn(PROFILE["contact"]["email"], prompt)
         self.assertIn("job_posting_untrusted", prompt)
         self.assertNotIn("tailoring_rules/truth_rule", evidence_catalog(PROFILE))
+
+    @patch("document_layout.to_pdf")
+    @patch("document_layout.write_resume")
+    def test_two_page_resume_is_within_profile_limit(self, write, to_pdf):
+        to_pdf.side_effect = lambda path, office: (Path(path).with_suffix(".pdf"), 2)
+        with tempfile.TemporaryDirectory() as folder:
+            outputs, overflow = render_draft(
+                fixture("resume"), PROFILE, JOB, folder, "soffice"
+            )
+        self.assertEqual(overflow, [])
+        self.assertIn("resume", outputs)
 
     def test_docx_layout_and_metadata(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -203,12 +237,12 @@ class DocumentTests(unittest.TestCase):
             self.assertFalse((Path(folder) / "applications").exists())
 
     @patch("generate_documents.find_soffice", return_value="soffice")
-    @patch("generate_documents.render_draft", return_value=({}, ["resume is 2 pages"]))
+    @patch("generate_documents.render_draft", return_value=({}, ["resume is 3 pages"]))
     def test_overflow_blocks_publication(self, render, office):
         with tempfile.TemporaryDirectory() as folder:
             job_path = Path(folder) / "job.json"
             job_path.write_text(json.dumps(JOB))
-            with self.assertRaisesRegex(ValueError, "2 pages"):
+            with self.assertRaisesRegex(ValueError, "3 pages"):
                 generate_documents(job_path, output_dir=folder, client=FakeClient("both"), attempts=1)
             self.assertFalse((Path(folder) / "applications").exists())
 

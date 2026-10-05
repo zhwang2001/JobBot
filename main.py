@@ -25,10 +25,13 @@ def run_pipeline(url, *, state_dir=ROOT / ".scrapling", data_dir=None,
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("url", nargs="?", help="Indeed job URL; prompts if omitted")
+    parser.add_argument("url", nargs="?", help="Indeed or LinkedIn job URL; prompts if omitted")
     parser.add_argument("--state-dir", type=Path, default=ROOT / ".scrapling")
     parser.add_argument("--data-dir", type=Path, help="Job JSON directory (default: OUTPUT_DIR/data)")
-    parser.add_argument("--headed", action="store_true", help="Show the dedicated scraping browser")
+    parser.add_argument(
+        "--headed", action="store_true",
+        help="Show the dedicated browser (required for first-time LinkedIn sign-in)",
+    )
     parser.add_argument("--html", type=Path, help="Use a captured rendered DOM instead of fetching (testing/offline)")
     add_generation_options(parser)
     args = parser.parse_args(argv)

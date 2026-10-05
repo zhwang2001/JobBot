@@ -1,7 +1,7 @@
 {
   "schema_version": "1.4",
   "profile_name": "James Wang - Master Career Profile",
-  "purpose": "Persuasive, recruiter-focused master profile for ATS resumes, cover letters, and application answers. Sell the candidate's strengths confidently: foreground achievements, scale, initiative, practical capabilities, and relevance to the employer. Use strong language and the most compelling defensible interpretation of the experience rather than cautious, literal restatement. Reframe and combine related experience freely without inventing credentials, employment history, or numerical results.",
+  "purpose": "Persuasive, recruiter-focused master profile for ATS resumes, cover letters, and application answers. Sell the candidate's experience confidently. When a requirement is not met exactly, identify the closest relevant experience and transferable skills, then frame them in the employer's language. Prioritize substantial overlap in duties, techniques, environments, and competencies rather than disqualifying the candidate over different job titles, industries, or exact tools. If the experience is substantially similar, answer 'Yes' and explain the relevant experience clearly. Use the strongest defensible interpretation of the background without inventing credentials, certifications, tools, duties, employers, dates, or numerical results.",
   "contact": {
     "name": "James Wang",
     "phone": "6473547123",
@@ -511,10 +511,10 @@
     {
       "id": "crestplay",
       "organization": "Crestplay",
-      "title": "Founder / Operator",
+      "title": "Product Manager",
       "start": null,
       "end": "Present",
-      "employment_type": "Entrepreneurial experience",
+      "employment_type": "Professional experience",
       "primary_families": [
         "research_admin",
         "scientific_commercial_client"
@@ -570,10 +570,10 @@
     {
       "id": "procyon_labs",
       "organization": "Procyon Laboratories",
-      "title": "Co-founder",
+      "title": "Product Developer",
       "start": null,
       "end": null,
-      "employment_type": "Startup / project",
+      "employment_type": "Professional experience",
       "primary_families": [
         "scientific_commercial_client",
         "production_operations",
@@ -619,7 +619,7 @@
           "tags": [
             "pitch competition",
             "grant",
-            "entrepreneurship",
+            "product strategy",
             "presentation"
           ],
           "safe_to_claim": true,
@@ -776,12 +776,14 @@
     "output_policy": "Publish PDFs only, with the candidate name and document type in the filename, inside a directory named for the job title and employer. Do not put job IDs or run IDs in recruiter-facing filenames.",
     "headline": "Use a role-specific headline; do not default to 'Researcher' for every application.",
     "summary": "2-4 lines that sell the candidate's strongest match to the actual job. Lead with practical capabilities and relevant achievements, not disclaimers or gaps. Use confident, employer-facing language; do not repeatedly qualify genuine experience as merely transferable.",
-    "experience_selection": "Select the 2-4 most relevant experiences. Entrepreneurial roles may be included or omitted based on relevance.",
+    "experience_selection": "Select every materially relevant experience, typically 3-6 roles. Do not default to only two roles, omit an older relevant role merely to force one page, or exclude an experience because its industry or original title differs from the posting. Rank roles by relevance and retain distinct evidence that strengthens the application; omit only genuinely low-value or unrelated experience.",
     "bullet_selection": "Use 3-5 high-value bullets per selected experience. Lead with decisive action verbs and foreground outcomes, scale, quality, safety, initiative, and problem solving. Turn routine duties into compelling statements of contribution where the recorded work supports that interpretation. Avoid timid phrasing and repetitive lists of tasks.",
     "skills_selection": "Show only skills relevant to the posting. Do not dump the full software stack into lab/QC resumes.",
     "academic_lab_rule": "Label as 'Academic Laboratory Experience' and include only for roles where it materially strengthens technical fit.",
     "keyword_rule": "Actively translate experience into the employer's terminology and emphasize the strongest relevant connections. Accept ordinary industry synonyms and broader skill summaries; do not require verbatim copying from the profile. Keep keywords natural and specific to the actual duties, not just the job title.",
-    "truth_rule": "Use bold, sales-oriented positioning and the strongest defensible framing of the recorded experience. Rephrase, synthesize multiple facts, emphasize impact, and express professional strengths confidently. Promotional emphasis and reasonable descriptions of capability are welcome; a resume is not an exhaustive limitations report. Preserve material distinctions such as availability versus prior employment, coursework versus employment, and practical experience versus formal certification. Do not manufacture credentials, employers, employment dates, or numerical achievements.",
+    "truth_rule": "Sell the candidate's experience confidently using the strongest defensible interpretation of the recorded background. When a requirement is not met exactly, identify the closest relevant experience and transferable skills, then frame them in the employer's language. Prioritize overlap in duties, techniques, environments, and competencies rather than disqualifying the candidate over different job titles, industries, or exact tools. Rephrase and synthesize supported facts, emphasize impact, and avoid unnecessary disclaimers. Do not invent credentials, certifications, tools, duties, employers, dates, or numerical achievements.",
+    "application_answer_rule": "For screening and application questions, if the candidate's recorded experience is substantially similar to the requirement, answer 'Yes' and clearly explain the closest relevant experience, overlap, and transferable capability. Reserve 'No' for requirements with no defensible substantial match. Never invent a credential, certification, tool, duty, or experience to justify a 'Yes'.",
+    "business_role_presentation": "Present Crestplay and Procyon Laboratories as standard professional experience alongside other jobs, using the profile titles 'Product Manager' and 'Product Developer'. Do not label either role as founder, co-founder, owner, operator, entrepreneurial experience, startup experience, or a side project in recruiter-facing documents. Use neutral role titles that describe the work without highlighting seniority, while preserving the recorded organizations, dates, and duties.",
     "tone_rule": "Assertive, capable, achievement-led, and commercially persuasive. Prefer direct descriptions such as 'performed', 'operated', 'identified', 'coordinated', and 'improved' where supported. Do not default to 'basic', 'limited', 'only', 'merely', 'helped', or 'transferable' throughout the document. State a scope qualification once when it materially changes the meaning; do not repeat it in every sentence.",
     "review_policy": "Review material misrepresentation, not stylistic literalism. Accept confident positioning, natural paraphrases, equivalent industry terminology, and summaries combining related facts. Do not reject wording simply because it is more persuasive than the source. Where a claim has support elsewhere in the profile, cite the appropriate fact instead of needlessly weakening the claim. Keep qualifications proportional to the risk of a materially wrong interpretation.",
     "night_shift_rule": "Night-shift availability is explicitly confirmed. For relevant postings, confidently state 'Available for night shifts' or 'Willing and available to work night shifts', citing availability/night_shift or availability/night_shift_statement. This is a scheduling commitment, not a claim of previous night-shift employment.",
@@ -790,9 +792,9 @@
     "regulated_quality_rule": "For pharma/biotech/QA roles, surface LIMS/barcode traceability, SOP/protocol adherence, sample identity control, contamination prevention, equipment checks, data integrity, deviation detection, escalation, and corrective re-collection. Use GMP/GLP/CAPA/HACCP terminology only as aligned/transferable practice unless formal regulated-system experience is verified.",
     "document_layout_policy": {
       "resume": {
-        "default_length": "1-2 pages",
+        "default_length": "1-2 pages; prefer two pages when needed to retain multiple relevant roles and evidence",
         "maximum_pages": 2,
-        "length_rule": "A two-page resume is explicitly acceptable. Use the space when relevant experience benefits from it; do not reject a resume merely because it reaches a second page. Do not pad a concise resume just to fill two pages.",
+        "length_rule": "A two-page resume is explicitly acceptable and should be used whenever it preserves additional relevant experience, stronger evidence, or useful ATS keywords. Never omit a materially relevant role solely to force one page, and never flag a resume for review merely because it reaches a second page. Do not pad a genuinely concise resume just to fill two pages.",
         "format": "single-column ATS-safe layout",
         "body_font_size_pt": "10.5-11.0",
         "line_spacing": "approximately 1.10-1.15",
@@ -812,13 +814,13 @@
         "visual_baseline": "James_Wang_Lab_Technician_Orillia_Cover_Letter_v3"
       }
     },
-    "content_density_rule": "Prioritize readable, persuasive content over an arbitrary one-page target. Use a second resume page when justified by relevant experience. If the resume becomes cramped or exceeds two pages, cut repetition and lower-value details before reducing type size or spacing. Keep the cover letter to its separate one-page policy."
+    "content_density_rule": "Prioritize complete, relevant, ATS-readable evidence over an arbitrary one-page target. Use a second resume page freely to include all materially relevant roles; do not treat one page as the preferred outcome. If the resume exceeds two pages, cut repetition and genuinely lower-value details before removing relevant experience or reducing type size and spacing. Keep the cover letter to its separate one-page policy."
   },
   "open_questions_for_v1_1": [
     "Exact start/end dates and preferred resume title for Voloaxle.",
     "Exact start/end dates and preferred resume title for Health Central.",
-    "Crestplay start date and whether 'Founder' or 'Co-founder' is the preferred title.",
-    "Procyon Laboratories start/end dates and whether it was incorporated/employment, a startup project, or an extracurricular venture.",
+    "Crestplay start date.",
+    "Procyon Laboratories start/end dates.",
     "Exact title/name of the Halton Small Business Centre Winter 2024 pitch competition/program if the award will be listed.",
     "Whether the Corteva assignment's official HR title was exactly 'Research Assistant'.",
     "Whether any specific electronic lab notebook, inventory system, LIMS-like software, or internal tracking software was used at Corteva.",
